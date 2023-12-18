@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import url('https://fonts.googleapis.com/css?family=Figtree');
+
+html, body, :root
+{
+  height: 100dvh;
+  background-color: #ffb300;
+  font-family: 'Figtree';
+}
+
+.right-button:hover
+{
+  background: linear-gradient(90deg, rgba(34,193,195,0) 0%, rgba(0,0,0,0.45977011494252873) 100%);
+}
+
+.left-button:hover
+{
+  background: rgb(0,0,0);
+  background: linear-gradient(90deg, rgba(0,0,0,0.45977011494252873) 0%, rgba(34,193,195,0) 100%);
+}
+
+.slide-initial
+{
+  transform: translateX(0%);
+}
+
+.slide-stand
+{
+  transform: translateX(100%);
+}
+
+.bottle-active
+{
+  transform: translateX(100%);
+  animation: 1400ms slide-in;
+  animation-fill-mode: forwards;
+}
+
+.title-active
+{
+  transform: translateX(100%);
+  animation: 1600ms slide-in-title;
+  animation-fill-mode: forwards;
+}
+
+.fruit-active
+{
+  transform: translateX(100%);
+  animation: 1500ms slide-in-title;
+  animation-fill-mode: forwards;
+}
+
+
+.slide-hidden
+{
+  transform: translateX(0%);
+  animation: 1500ms slide-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-in 
+{
+  70% {
+    transform: translateX(-3%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slide-in-title
+{
+  70% {
+    transform: translateX(-5%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slide-out 
+{
+  to {
+    transform: translateX(-130%);
+  }
+}
